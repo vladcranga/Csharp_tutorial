@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tutorial
+﻿namespace Tutorial
 {
     class TutorialFile
     {
@@ -12,9 +6,6 @@ namespace Tutorial
         {
             // write to the console
             Console.WriteLine("Hello World");
-
-            // read from the console
-            //Console.ReadLine();
 
             // strings
             string characterName = "John";
@@ -34,7 +25,7 @@ namespace Tutorial
             bool isMale = true;
 
             // working with strings
-            Console.WriteLine(phrase[0]);
+            Console.WriteLine(phrase[0] + grade + Convert.ToString(isMale));
             Console.WriteLine(phrase.Length);
             Console.WriteLine(phrase.ToUpper());
             Console.WriteLine(phrase.Contains("Academy"));
@@ -45,6 +36,42 @@ namespace Tutorial
             Console.WriteLine(gpa - 1.1);
             Console.WriteLine(Math.Pow(3, 2));
 
+            // get user input
+            /*
+            Console.Write("Enter your name: "); // no new line
+            string? name = Console.ReadLine(); // possibly null value
+            Console.WriteLine("Hello " + name);
+            */
+
+            // convert strings to numbers
+            int num1 = Convert.ToInt32("45"); // or double...ToDouble
+            Console.WriteLine(num1 + age);
+
+            // arrays
+            int[] luckyNumbers = { 4, 8, 15, 23, 42 };
+            luckyNumbers[1] = 20;
+            Console.WriteLine(luckyNumbers[1]);
+            string[] friends = new string[10]; // size 10 array
+            friends[0] = "Jim";
+
+            // calling methods
+            SayHi(friends[0]);
+            Console.WriteLine(Cube(5));
+
         }
+
+        // methods
+        static void SayHi(string name)
+        {
+            Console.WriteLine("Hello " + name);
+        }
+
+        // the return statement
+        static int Cube(int num)
+        {
+            int result = num * num * num;
+            return result;
+        }
+
     }
 }
