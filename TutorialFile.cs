@@ -58,6 +58,31 @@
             SayHi(friends[0]);
             Console.WriteLine(Cube(5));
 
+            // if statements
+            bool isTall = true;
+
+            if (isMale && isTall) // || for 'or'
+            {
+                Console.WriteLine("You are a tall male");
+            }
+
+            else if (isMale && !isTall)
+            {
+                Console.WriteLine("You are not a tall male");
+            }
+
+            else if (!isMale && isTall)
+            {
+                Console.WriteLine("You are tall but not a male");
+            }
+
+            else
+            {
+                Console.WriteLine("You are not male and not tall");
+            }
+
+            Console.WriteLine(GetMax(2, 10));
+
         }
 
         // methods
@@ -70,6 +95,18 @@
         static int Cube(int num)
         {
             int result = num * num * num;
+            return result;
+        }
+
+        static int GetMax(int num1, int num2)
+        {
+            int result;
+
+           if (num1 >= num2)
+                    result = num1;
+           else
+                    result = num2;
+
             return result;
         }
 
